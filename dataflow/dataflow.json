@@ -18,7 +18,13 @@
 					"type": "DatasetReference"
 				},
 				"name": "sink1",
-				"script": "source1 sink(saveMode:'overwrite') ~> sink1"
+				"script": "Lookup1 sink(saveMode:'overwrite') ~> sink1"
+			}
+		],
+		"transformations": [
+			{
+				"name": "Lookup1",
+				"script": "source1 lookup(AddressID == ERROR_FUNCTION(''),\n\tbroadcast: 'none')~> Lookup1"
 			}
 		]
 	}
