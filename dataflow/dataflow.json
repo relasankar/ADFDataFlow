@@ -36,7 +36,7 @@
 			},
 			{
 				"name": "ConditionalSplit1",
-				"script": "Lookup1 split(ERROR_FUNCTION(''),\n\tdisjoint: false) ~> ConditionalSplit1@(NoMatchedRows, MatchedRows)"
+				"script": "Lookup1 split(source2@AddressID!=source1@AddressID,\n\tdisjoint: false) ~> ConditionalSplit1@(NoMatchedRows, MatchedRows)"
 			}
 		]
 	}
