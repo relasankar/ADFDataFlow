@@ -1,0 +1,21 @@
+{
+	"name": "dataflow",
+	"properties": {
+		"sources": [
+			{
+				"dataset": {
+					"referenceName": "AzureSqlTable1",
+					"type": "DatasetReference"
+				},
+				"name": "source1",
+				"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> source1"
+			}
+		],
+		"sinks": [
+			{
+				"name": "sink1",
+				"script": "source1 sink(saveMode:'overwrite') ~> sink1"
+			}
+		]
+	}
+}
