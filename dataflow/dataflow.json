@@ -26,7 +26,7 @@
 					"type": "DatasetReference"
 				},
 				"name": "sink1",
-				"script": "ConditionalSplit1@NoMatchedRows sink(saveMode:'overwrite') ~> sink1"
+				"script": "ConditionalSplit1@NoMatchedRows sink(mapColumn(\n\t\tAddressID = ConditionalSplit1@AddressID,\n\t\tAddressLine1 = ConditionalSplit1@AddressLine1,\n\t\tAddressLine2 = ConditionalSplit1@AddressLine2,\n\t\tCity = ConditionalSplit1@City,\n\t\tStateProvince = ConditionalSplit1@StateProvince,\n\t\tCountryRegion = ConditionalSplit1@CountryRegion,\n\t\tPostalCode = ConditionalSplit1@PostalCode,\n\t\trowguid = ConditionalSplit1@rowguid,\n\t\tModifiedDate = ConditionalSplit1@ModifiedDate\n\t),\n\tsaveMode:'overwrite') ~> sink1"
 			}
 		],
 		"transformations": [
