@@ -1,0 +1,51 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "AddressID",
+				"type": "Int32"
+			},
+			{
+				"name": "AddressLine1",
+				"type": "String"
+			},
+			{
+				"name": "AddressLine2",
+				"type": "String"
+			},
+			{
+				"name": "City",
+				"type": "String"
+			},
+			{
+				"name": "StateProvince",
+				"type": "String"
+			},
+			{
+				"name": "CountryRegion",
+				"type": "String"
+			},
+			{
+				"name": "PostalCode",
+				"type": "String"
+			},
+			{
+				"name": "rowguid",
+				"type": "Guid"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "DateTime"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[SalesLT].[Address]"
+		}
+	}
+}
