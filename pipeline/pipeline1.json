@@ -16,6 +16,10 @@
 					"dataflow": {
 						"referenceName": "dataflow",
 						"type": "DataFlowReference"
+					},
+					"linkedService": {
+						"referenceName": "AzureDatabricks1",
+						"type": "LinkedServiceReference"
 					}
 				}
 			}
