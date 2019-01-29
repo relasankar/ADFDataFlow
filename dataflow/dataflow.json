@@ -13,6 +13,10 @@
 		],
 		"sinks": [
 			{
+				"dataset": {
+					"referenceName": "AzureSqlTable2",
+					"type": "DatasetReference"
+				},
 				"name": "sink1",
 				"script": "source1 sink(saveMode:'overwrite') ~> sink1"
 			}
